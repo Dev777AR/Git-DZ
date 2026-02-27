@@ -1,1 +1,1 @@
-sudo usermod -g developers alena
+sudo groupadd developers,sudo usermod -g developers alena
