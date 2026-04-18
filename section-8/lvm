@@ -9,12 +9,10 @@ sudo mkdir -p /storage
 Смонтируйте файловую систему:
 
 sudo mount /dev/volume1/storage /storage
-
+sudo mkfs.xfs /dev/volume1/storage
 Добавьте монтирование в fstab для автомонтирования при загрузке:
 
-Откройте файл /etc/fstab в текстовом редакторе с правами суперпользователя, например:
-bash
-sudo nano /etc/fstab
+Откройте файл /etc/fstab sudo nano /etc/fstab
 Добавьте следующую строку:
 
 /dev/volume1/storage /storage xfs defaults 0 0
