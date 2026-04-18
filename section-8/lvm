@@ -1,4 +1,4 @@
-sudo pvcreate /dev/vdb
+ pvcreate /dev/vdb
 sudo vgcreate volume1 /dev/vdb
 sudo lvcreate -l 100%VG -n storage volume1
 
@@ -6,10 +6,12 @@ sudo lvcreate -l 100%VG -n storage volume1
 
 sudo mkdir -p /storage
 
+sudo mkfs.xfs /dev/volume1/storage
+
 Смонтируйте файловую систему:
 
 sudo mount /dev/volume1/storage /storage
-sudo mkfs.xfs /dev/volume1/storage
+
 Добавьте монтирование в fstab для автомонтирования при загрузке:
 
 Откройте файл /etc/fstab sudo nano /etc/fstab
