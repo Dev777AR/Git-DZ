@@ -1,1 +1,2 @@
-lsof -c ssh это кмонада 
+
+lsof -c ssh | grep REG
