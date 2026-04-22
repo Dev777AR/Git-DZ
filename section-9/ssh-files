@@ -1,1 +1,1 @@
-lsof -c ssh
+lsof -c ssh это кмонада 
